@@ -26,4 +26,4 @@ build/release
 npm-debug.log.*
 *.css.d.ts
 *.less.d.ts
-/package-lock.json
+package-lock.json

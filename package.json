@@ -2,8 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "-------": "--hoist 重复的依赖提取到最外层的 node_modules 里，同时最外层的 package.json 也不会更新 dependency 信息",
-    "hoist": "lerna bootstrap --hoist"
+    "---1---": "--hoist 重复的依赖提取到最外层的 node_modules 里，同时最外层的 package.json 也不会更新 dependency 信息",
+    "install": "lerna bootstrap --hoist",
+    "---2---": "删除所有依赖",
+    "clean": "lerna clean --yes"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
