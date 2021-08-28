@@ -163,5 +163,6 @@ routes: closeFlexRoute ? routes : undefined,
 
 ### 参考
 
-(官方electron文档)[https://www.electronjs.org/docs]
-(官方umi文档)[https://umijs.org/]
+[官方electron文档](https://www.electronjs.org/docs)
+
+[官方umi文档](https://umijs.org/)
