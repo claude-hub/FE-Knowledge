@@ -1,6 +1,6 @@
 {
   "name": "@claude-demo/react-ts-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react17 + webpack5 + typescript project environment.",
   "main": "index.js",
   "scripts": {
