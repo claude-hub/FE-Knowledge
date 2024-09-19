@@ -8,9 +8,12 @@
     "---1---": "算法",
     "algorithm": "lerna run --stream start --scope=@claude-hub/algorithm",
     "-----": "删除所有依赖",
-    "clean": "rm -rf node_modules && lerna clean -y"
+    "clean": "rm -rf node_modules && lerna clean -y",
+    "cz": "git-cz --lerna"
   },
-  "dependencies": {},
+  "dependencies": {
+    "git-cz": "^4.9.0"
+  },
   "devDependencies": {
     "lerna": "^8.1.8"
   }
