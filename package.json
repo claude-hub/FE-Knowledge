@@ -7,6 +7,9 @@
   "scripts": {
     "---1---": "算法",
     "algorithm": "lerna run --stream start --scope=@claude-hub/algorithm",
+
+    "---2---": "手写题",
+    "code": "lerna run --stream start --scope=@claude-hub/source-code",
     "-----": "删除所有依赖",
     "clean": "rm -rf node_modules && lerna clean -y",
     "cz": "git-cz --lerna"

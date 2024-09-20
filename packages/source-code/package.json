@@ -1,14 +1,11 @@
 {
-  "name": "@claude-hub/algorithm",
-  "version": "0.0.0",
-  "description": "手撕算法",
+  "name": "@claude-hub/source-code",
+  "version": "1.0.0",
+  "description": "手写提",
   "author": "claude-hub <claudez1115@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/claude-hub/front-end-cli#readme",
   "license": "ISC",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
-  },
   "scripts": {
     "start": "nodemon --harmony",
     "test": "jest --watchAll",

@@ -25,6 +25,11 @@
     js-tokens "^4.0.0"
     picocolors "^1.0.0"
 
+"@claude-hub/node-utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/@claude-hub/node-utils/-/node-utils-1.0.0.tgz#6c01e168eae8825e2ac77e99d975bcdd0cf5990e"
+  integrity sha512-y0jWeZhYI2itDJDwEu2PVr+wXf7qs2osSqHWi4rH/dDm9XDOP/Yq93LzWxUnPir0x6D2VM55DW2Vi2XCzPnHgA==
+
 "@emnapi/core@^1.1.0":
   version "1.2.0"
   resolved "https://registry.npmmirror.com/@emnapi/core/-/core-1.2.0.tgz#7b738e5033738132bf6af0b8fae7b05249bdcbd7"

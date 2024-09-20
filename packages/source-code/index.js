@@ -1,5 +1,5 @@
 const path = require('path');
-const { getPathFiles } = require('@claude-hub/node-utils');
+const { getPathFiles } = require("@claude-hub/node-utils");
 
 const files = getPathFiles(path.resolve(__dirname, './src'), ['utils']);
 
