@@ -1,11 +1,5 @@
-# `algorithm`
+## 热门 150
 
-> TODO: description
+https://leetcode.cn/studyplan/top-interview-150/
 
-## Usage
-
-```
-const algorithm = require('algorithm');
-
-// TODO: DEMONSTRATE API
-```
+https://labuladong.online/algo/

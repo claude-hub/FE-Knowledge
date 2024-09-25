@@ -31,6 +31,9 @@ const data = [
   }
 ]
 
+/**
+ * 深度优先遍历
+ */
 function treeToList(data) {
   let res = [];
   const dfs = (tree) => {
