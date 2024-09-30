@@ -26,3 +26,8 @@ const quickSort = (arr) => {
 
   return quickSort(left).concat([pivot], quickSort(right));
 }
+
+
+const arr = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8];
+const res = quickSort(arr);
+console.log(res);
