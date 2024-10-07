@@ -33,5 +33,20 @@ var removeElement = function (nums, val) {
   return k;
 };
 
+/**
+ * 快慢指针的思路，直接找出不等于目标值的元素，并覆盖到目标数组中。
+ */
+var removeElement = function(nums, val) {
+  var fast = 0, slow = 0;
+  while (fast < nums.length) {
+      if (nums[fast] != val) {
+          nums[slow] = nums[fast];
+          slow++;
+      }
+      fast++;
+  }
+  return slow;
+}
+
 console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
 console.log(removeElement([3, 2, 2, 3], 3));

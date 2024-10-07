@@ -45,5 +45,26 @@ var removeDuplicates = function (nums) {
   return k;
 };
 
+
+/**
+ * 快慢指针，一个指针快一步。因为有序数组，所以，重复的话，肯定是相邻的
+ */
+var removeDuplicates = function(nums) {
+  if (nums.length == 0) {
+      return 0;
+  }
+  var slow = 0, fast = 0;
+  while (fast < nums.length) {
+      if (nums[fast] != nums[slow]) {
+          slow++;
+          // 维护 nums[0..slow] 无重复
+          nums[slow] = nums[fast];
+      }
+      fast++;
+  }
+  // 数组长度为索引 + 1
+  return slow + 1;
+};
+
 console.log(removeDuplicates([1,1,2]));
 console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
