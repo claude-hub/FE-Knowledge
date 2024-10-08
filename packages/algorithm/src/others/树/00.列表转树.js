@@ -52,3 +52,37 @@ function bfs(root) {
 const tree = arrToTree(data);
 
 console.log(bfs(tree))
+
+
+
+/**
+ * 集合数据转换为树形结构。option.parent支持函数，示例：(n) => n.meta.parentName
+ * @param {Array} list 集合数据
+ * @param {Object} option 对象键配置，默认值{ key: 'id', parent: 'pid', children: 'children' }
+ * @returns 树形结构数据tree
+ */
+function list2Tree(list, option = { key: 'id', parent: 'pid', children: 'children' }) {
+  let tree = []
+  // 获取父编码统一为函数
+  let pvalue = typeof (option.parent) === 'function' ? option.parent : (n) => n[option.parent]
+  // map存放所有对象
+  let map = {}
+  list.forEach(item => {
+    map[item[option.key]] = item
+  })
+
+  //遍历设置根节点、父级节点
+  list.forEach(item => {
+
+    if (!pvalue(item))
+      tree.push(item)
+    else {
+      map[pvalue(item)][option.children] ??= []
+      map[pvalue(item)][option.children].push(item)
+    }
+  })
+  return tree
+}
+
+const tree1 = list2Tree(data);
+console.log(tree1)
