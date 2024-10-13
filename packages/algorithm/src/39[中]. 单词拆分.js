@@ -58,6 +58,12 @@ var wordBreak = function (s, wordDict) {
   dp[0] = true;
   for (let i = 1; i <= len; i++) {
     for (let j = 0; j < i; j++) {
+      // 思路：
+      // i = 1;
+      // j = [0, 1]
+      // j = 2;
+      // j = [0, 1, 2]。 然后去判断当前的j里面在子串是否是在 word 列表里面
+
       // 左侧的子串，从 [0] 开始
       if (dp[j]) {
         // 后缀是单词，且左侧子串[0,j-1]的dp[j]为真
@@ -68,6 +74,7 @@ var wordBreak = function (s, wordDict) {
       }
     }
   }
+  console.log(dp)
   return dp[len];
 };
 
