@@ -40,9 +40,9 @@ var maxProfit = function (prices, fee) {
   const dp = new Array(n).fill(0).map(v => new Array(2).fill(0));
   dp[0][0] = 0, dp[0][1] = -prices[0];
   for (let i = 1; i < n; i++) {
-    // 第 i 天不持有可获得的最大利润
+    // 第 i 天不持有可获得的最大利润 = Math.max(不持有，持有后卖出)
     dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);
-    // 第 i 天持有可获得的最大利润
+    // 第 i 天持有可获得的最大利润 = Math.max(不持有，持有前买入)
     dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
   }
   return dp[n - 1][0];
