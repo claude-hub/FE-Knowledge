@@ -46,3 +46,18 @@ console.log(compareVersion('1.0', '1.0.0.0'))
 console.log(
   ['1.0.2', '1.02.1', '1.1.2', '2.33', '6', '3.3.3.3', '0.0.1'].sort(compareVersion)
 )
+
+const mySort = (arr) => {
+  const len = arr.length;
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = 0; j < len - i - 1; j++) {
+      if (compareVersion(arr[j], arr[j + 1]) === 1) {
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+};
+
+mySort(['1.0.2', '1.02.1', '1.1.2', '2.33', '6', '3.3.3.3', '0.0.1']);
